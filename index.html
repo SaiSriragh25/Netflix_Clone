@@ -19,6 +19,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://assets.nflxext.com/ffe/siteui/vlv3/8cc08720-ac1c-4364-bcbd-9495bf0308cd/web/IN-en-20260323-TRIFECTA-perspective_0b8c8e4e-71ee-48bd-8e16-da74f083a838_large.jpg");
             background-size: cover;
             min-height: 100vh;
+            padding-bottom: 100px;
         }
 
         .title {
@@ -231,35 +232,63 @@
                 object-fit: contain;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .title {
+                margin-top: 50px;
+            }
+            .main {
+                padding-bottom: 140px;
+                min-height: auto;
+            }
+            .curve-line-section {
+                margin-top: -30px;
+            }
+            .logo {
+                margin-left: 0;
+                height: 30px !important;
+            }
+            h1 {
+                font-size: 2.2rem !important;
+            }
+            h4 {
+                font-size: 1.1rem !important;
+            }
+            .custom-input {
+                width: 100%;
+            }
+            .custom-btn {
+                width: max-content;
+                justify-content: center;
+                padding-left: 24px;
+                padding-right: 24px;
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <nav class="navbar navbar-expand-lg  ">
+        <nav class="navbar navbar-expand-lg pt-4">
             <div class="container d-flex justify-content-between align-items-center">
                 <a class="navbar-brand p-0" href="#">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-                        class="img-fluid mt-4 logo" style="height: 50px;" alt="Netflix Logo">
+                        class="img-fluid logo" style="height: 48px;" alt="Netflix Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2">
 
                     <div class="position-relative">
                         <i
                             class="fa-solid fa-language text-white position-absolute top-50 start-0 translate-middle-y ms-2"></i>
 
-                        <select class="form-select ps-5 pe-4 bg-dark text-white border-secondary">
+                        <select class="form-select ps-4 pe-3 bg-dark text-white border-secondary" style="padding-top: 0.35rem; padding-bottom: 0.35rem; font-size: 0.9rem;">
                             <option>English</option>
                             <option>हिन्दी</option>
                         </select>
                     </div>
 
-                    <button class="btn btn-danger btn-sm px-4">
+                    <button class="btn btn-danger px-3 py-1" style="font-size: 0.9rem; font-weight: 500;">
                         Sign In
                     </button>
 
@@ -273,7 +302,7 @@
                     <h1 class="">Unlimited movies,<br>shows, and more</h1>
                     <h4 class="my-3">Starts at ₹149. Cancel at any time.</h4>
                     <p class="mt-4">Ready to watch? Enter your email to create or restart your membership.</p>
-                    <div class="container d-flex align-items-center justify-content-center flex-wrap gap-2 mt-1">
+                    <div class="w-100 d-flex align-items-center justify-content-center flex-column flex-md-row gap-3 mt-1">
 
                         <input class="form-control custom-input text-light border-secondary" type="Email"
                             placeholder="Email address" name="name" required />
@@ -800,8 +829,8 @@
         <div class="row">
             <div class="col text-white d-flex flex-column align-items-center justify-content-center mb-5 ">
                 <p class="mt-2">Ready to watch? Enter your email to create or restart your membership.</p>
-                <div class="container d-flex align-items-center justify-content-center flex-wrap gap-2 mt-1">
-                    <input class="form-control custom-input text-light border-secondary w-50" type="Email"
+                <div class="w-100 d-flex align-items-center justify-content-center flex-column flex-md-row gap-3 mt-1">
+                    <input class="form-control custom-input text-light border-secondary" type="Email"
                         placeholder="Email address" name="name" required />
 
                     <button type="button"
